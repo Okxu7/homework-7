@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Завдання 1: Завантаження альбомів із JSONPlaceholder</h2>
+
+  <ul>
+    <li *ngFor="let album of albumsList">
+      <strong>ID: {{ album.id }}</strong> — {{ album.title }}
+    </li>
+  </ul>
+</div>
+
+<hr style="margin: 30px 0;">
+
+  <h2>Завдання 2: Дані через клас Album (без userId)</h2>
+  <ul style="background: #e6f7ff; padding: 15px; border-radius: 8px;">
+    <!-- ПЕРЕВІРТЕ НАЯВНІСТЬ ЦЬОГО РЯДКА -->
+    <li *ngFor="let album of albumsListTask2">
+      <strong>ID: {{ album.id }}</strong> — {{ album.title }}
+    </li>
+  </ul>
+
+
+<!-- 
+<div class="container" style="padding: 20px;">
+  <h2>Завдання 1: Список альбомів</h2>
+  
+  <!-- Цей напис зникне, коли дані завантажаться -->
+  <!-- <p *ngIf="albumsList.length === 0" style="color: gray;">
+    Завантаження даних...
+  </p>
+
+  <!-- Виведення масиву на екран -->
+  <!-- <ul>
+    <li *ngFor="let album of albumsList">
+      <strong>{{ album.id }}</strong> - {{ album.title }}
+    </li>
+  </ul>
+</div>  -->
