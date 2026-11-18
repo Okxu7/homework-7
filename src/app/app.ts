@@ -12,12 +12,23 @@ export class App implements OnInit {
   albumsList: any[] = []; // Змінна для Завдання 1
   albumsListTask2: Album[] = []; // Змінна для Завдання 2
 
+  // 1. Додаємо прапорець завантаження
+  isLoading: boolean = true;
+
   constructor(private albumsService: AlbumsService) {}
 
   ngOnInit(): void {
+
+    // 2. Вмикаємо індикатор перед запитом (необов'язково, бо він true за замовчуванням)
+    this.isLoading = true;
+
     // Виклик для Завдання 1
     this.albumsService.getAlbums().subscribe(data => {
       this.albumsList = data;
+// 3. Вимикаємо індикатор, коли дані надійшли
+      this.isLoading = false;
+
+
     });
 
     // Виклик для Завдання 2
